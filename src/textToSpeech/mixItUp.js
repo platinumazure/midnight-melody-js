@@ -1,5 +1,8 @@
+import fs from "node:fs";
 import { Client } from "node-rest-client";
-import config from "../../config.json" assert { type: "json" };
+
+const configPath = new URL("../../config.json", import.meta.url);
+const config = JSON.parse(fs.readFileSync(configPath, "utf8"));
 
 const client = new Client();
 
