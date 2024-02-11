@@ -18,5 +18,8 @@
   "license": "BSD-3-Clause",
   "devDependencies": {
     "eslint": "^8.56.0"
+  },
+  "dependencies": {
+    "node-rest-client": "^3.1.1"
   }
 }
