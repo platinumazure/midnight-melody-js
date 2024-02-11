@@ -1,0 +1,17 @@
+{
+  "name": "midnight-melody",
+  "version": "0.1.0",
+  "description": "AI streaming companion for PlatinumAzure",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "text-to-speech",
+    "large-language-model",
+    "streaming",
+    "ai-character"
+  ],
+  "author": "PlatinumAzure",
+  "license": "BSD-3-Clause"
+}
