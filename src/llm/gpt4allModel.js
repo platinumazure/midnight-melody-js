@@ -4,7 +4,17 @@ import { createCompletion, loadModel } from "gpt4all";
 const systemPromptUrl = new URL("../../config/MidnightMelodySystemPrompt.txt", import.meta.url);
 const systemPrompt = await fs.readFile(systemPromptUrl);
 
-const model = await loadModel("gpt4all-falcon-newbpe-q4_0.gguf");
+const model = await loadModel(
+    "gpt4all-falcon-newbpe-q4_0.gguf",
+    {
+        verbose: false,
+        nBatch: 128,
+        nCtx: 2048,
+
+        // Use a short nPredict for brief responses
+        nPredict: 64,
+    }
+);
 
 export class Gpt4allModel {
     constructor() {
