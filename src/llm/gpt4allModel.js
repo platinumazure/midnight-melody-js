@@ -36,10 +36,10 @@ export class Gpt4allModel {
             }
         );
 
-        this._messages.push(response);
+        const responseMessage = response.choices[0].message;
+        this._messages.push(responseMessage);
     
-        const responseContent = response.choices[0].message.content;
-        return responseContent;
+        return responseMessage.content;
     }
 
     get lastResponse() {

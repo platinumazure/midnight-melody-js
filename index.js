@@ -8,6 +8,7 @@ const model = new Gpt4allModel();
 
 const userPrompts = [
     "What is the meaning of life?",
+    "Can you explain this in terms a 5 year old can understand?",
 ];
 
 for (const message of userPrompts) {
