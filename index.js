@@ -11,10 +11,14 @@ const userPrompts = [
     "Can you explain this in terms a 5 year old can understand?",
 ];
 
-for (const message of userPrompts) {
+for (const [index, message] of userPrompts.entries()) {
     console.log(`Sending user message: "${message}"`);
 
+    console.time(`Message ${index + 1}`);
+
     const responseContent = await model.getResponse(message);
+
+    console.timeEnd(`Message ${index + 1}`);
     console.log(`Received model response: "${responseContent}"`);
 
     await sendTts(responseContent);
